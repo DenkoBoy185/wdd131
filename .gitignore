@@ -1,0 +1,19 @@
+# System Files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Editor Directories
+.vscode/
+.idea/
+*.swp
+*.swo
