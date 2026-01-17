@@ -12,4 +12,6 @@ const navigation = document.querySelector('nav');
 hamButton.addEventListener('click', () => {
     navigation.classList.toggle('show');
     hamButton.classList.toggle('open');
+    const isExpanded = hamButton.classList.contains('open');
+    hamButton.setAttribute('aria-expanded', isExpanded);
 });
