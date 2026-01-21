@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil | Country Page</title>
+    <meta name="description" content="WDD 131 - Week 03 Assignment: Country Page for Brazil. Includes weather, data, and responsive design.">
+    <meta name="author" content="Bruno">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Brazil</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/brazil-hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/brazil-hero-medium.webp" media="(min-width: 500px)">
+                <img src="images/brazil-hero-small.webp" alt="Vibrant landscape of Brazil featuring Christ the Redeemer and Sugarloaf Mountain" width="400" height="200">
+            </picture>
+            <div class="data-overlay">
+                <!-- Optional overlay if needed for design, otherwise data is below -->
+            </div>
+        </div>
+
+        <section class="data-section">
+            <h2>Data</h2>
+            <div class="data-grid">
+                <div class="data-item">
+                    <h3>Area:</h3>
+                    <p>8,515,767 sq km</p>
+                </div>
+                <div class="data-item">
+                    <h3>Population:</h3>
+                    <p>214.3 million</p>
+                </div>
+                <div class="data-item">
+                    <h3>Capital:</h3>
+                    <p>Brasília</p>
+                </div>
+                <div class="data-item">
+                    <h3>Languages:</h3>
+                    <p>Portuguese</p>
+                </div>
+                <div class="data-item">
+                    <h3>Currency:</h3>
+                    <p>Real (BRL)</p>
+                </div>
+                <div class="data-item">
+                    <h3>Time Zone:</h3>
+                    <p>UTC-2 to UTC-5</p>
+                </div>
+                <div class="data-item">
+                    <h3>Calling Code:</h3>
+                    <p>+55</p>
+                </div>
+                <div class="data-item">
+                    <h3>Internet TLD:</h3>
+                    <p>.br</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-section">
+            <h2 class="weather-title">Weather</h2>
+            <!-- Weather icon for mobile (SVG) goes here or via CSS? Instructions say "Use the SVG image format for the weather icon in the mobile view" -->
+            <img src="images/weather.svg" alt="Sunny weather icon" class="weather-icon-mobile">
+            
+            <div class="weather-data">
+                <div class="weather-item">
+                    <h3>Temperature:</h3>
+                    <p><span id="temperature">28</span>°C</p>
+                </div>
+                <div class="weather-item">
+                    <h3>Conditions:</h3>
+                    <p>Sunny</p>
+                </div>
+                <div class="weather-item">
+                    <h3>Wind:</h3>
+                    <p><span id="wind">12</span> km/h</p>
+                </div>
+                <div class="weather-item">
+                    <h3>Wind Chill:</h3>
+                    <p id="wind-chill">N/A</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Bruno | Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
