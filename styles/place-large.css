@@ -1,0 +1,66 @@
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 2rem;
+        max-width: 1000px;
+    }
+
+    .hero {
+        grid-column: 1 / -1;
+    }
+
+    /* Change Data Grid to be more substantial on desktop */
+    .data-section {
+        grid-column: 1 / 2;
+    }
+
+    .data-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .weather-section {
+        grid-column: 2 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    /* Requirement: "Using a pseudo element for the weather icon in the large view located after the heading 'Weather'." */
+    .weather-title::after {
+        content: ' ⛅';
+        /* Using emoticon as per alternative or just a character */
+        font-size: 2rem;
+        vertical-align: middle;
+        margin-left: 10px;
+        /* If we want to use an image via pseudo element:
+        content: '';
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-image: url('../images/weather.svg');
+        background-size: cover;
+        */
+        /* Instructions say: "Use an emoticon or equivalent for the weather icon ⛅ in the wider view by the 'Weather' heading." */
+    }
+
+    /* Hide the mobile SVG icon on desktop as per implicit design flow, 
+       though instructions say "Use the SVG image format for the weather icon in the mobile view".
+       It implies we might switch to pseudo element in desktop. */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    .weather-data {
+        background-color: transparent;
+        gap: 1rem;
+    }
+
+    .weather-item {
+        background-color: var(--white);
+        border-bottom: 1px solid var(--border-light);
+        border-radius: 0;
+    }
+}

@@ -1,0 +1,148 @@
+:root {
+    --primary-color: #009c3b; /* Brazil Green */
+    --secondary-color: #ffdf00; /* Brazil Yellow */
+    --accent-color: #002776; /* Brazil Blue */
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --white: #ffffff;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --border-color: #ccc;
+    --border-light: #ddd;
+    --bg-light: #eef;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+section {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--accent-color);
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Data Section Styles */
+.data-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.data-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted var(--border-color);
+    padding-bottom: 0.2rem;
+}
+
+.data-item h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.data-item p {
+    font-weight: 400;
+}
+
+/* Weather Section Styles */
+.weather-section {
+    text-align: center;
+    position: relative;
+}
+
+.weather-icon-mobile {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    display: block; /* Visible on mobile */
+}
+
+.weather-data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.weather-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-light);
+    border-radius: 4px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* Wind Chill specific styles handled by logic mostly, but we style the container */
+#wind-chill {
+    font-weight: bold;
+    color: var(--accent-color);
+}

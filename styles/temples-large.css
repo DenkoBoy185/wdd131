@@ -1,0 +1,36 @@
+/* Large view specific styles */
+@media (min-width: 768px) {
+    #menu {
+        display: none;
+        /* Hide hamburger menu on large settings */
+    }
+
+    nav {
+        display: flex;
+        /* Show nav links always */
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        width: auto;
+        justify-content: flex-end;
+    }
+
+    nav a {
+        padding: 1rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* Main layout adjustments */
+
+    main {
+        max-width: 1000px;
+        /* Widen main for grid */
+    }
+}
