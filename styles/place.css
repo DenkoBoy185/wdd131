@@ -1,7 +1,10 @@
 :root {
-    --primary-color: #009c3b; /* Brazil Green */
-    --secondary-color: #ffdf00; /* Brazil Yellow */
-    --accent-color: #002776; /* Brazil Blue */
+    --primary-color: #009c3b;
+    /* Brazil Green */
+    --secondary-color: #ffdf00;
+    /* Brazil Yellow */
+    --accent-color: #002776;
+    /* Brazil Blue */
     --text-color: #333;
     --background-color: #f4f4f4;
     --white: #ffffff;
@@ -10,6 +13,10 @@
     --border-color: #ccc;
     --border-light: #ddd;
     --bg-light: #eef;
+    --shadow-sm: rgba(0, 0, 0, 0.1);
+    --shadow-md: rgba(0, 0, 0, 0.3);
+    --shadow-xs: rgba(0, 0, 0, 0.05);
+    --transparent: transparent;
 }
 
 * {
@@ -30,14 +37,14 @@ header {
     color: var(--secondary-color);
     text-align: center;
     padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px var(--shadow-sm);
 }
 
 header h1 {
     font-family: var(--font-heading);
     margin: 0;
     font-size: 2.5rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 2px var(--shadow-md);
 }
 
 main {
@@ -58,14 +65,14 @@ main {
     height: auto;
     display: block;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px var(--shadow-sm);
 }
 
 section {
     background-color: var(--white);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px var(--shadow-xs);
     border-top: 5px solid var(--accent-color);
 }
 
@@ -111,7 +118,8 @@ h2 {
     width: 64px;
     height: 64px;
     margin: 0 auto 1rem;
-    display: block; /* Visible on mobile */
+    display: block;
+    /* Visible on mobile */
 }
 
 .weather-data {

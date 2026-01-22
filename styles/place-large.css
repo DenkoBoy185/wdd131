@@ -54,7 +54,7 @@
     }
 
     .weather-data {
-        background-color: transparent;
+        background-color: var(--transparent);
         gap: 1rem;
     }
 
