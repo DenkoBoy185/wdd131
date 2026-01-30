@@ -78,6 +78,13 @@ nav a:hover {
     color: #000;
 }
 
+nav a.active {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    color: #fff;
+    border-left: 4px solid var(--accent-color);
+}
+
 main {
     max-width: 800px;
     margin: 0 auto;
@@ -98,6 +105,9 @@ figure {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 figure:hover {
@@ -107,9 +117,28 @@ figure:hover {
 
 figure img {
     width: 100%;
-    height: auto;
-    /* Maintain aspect ratio */
+    height: 250px;
+    /* Fixed height for uniformity */
+    object-fit: cover;
     border-radius: 5px;
+    margin-bottom: 10px;
+    /* Order adjusted in flex container if needed, but DOM order dictates if not specified */
+}
+
+/* Ensure consistent typography for dynamic cards */
+figure h3 {
+    margin: 0.5rem 0;
+    color: var(--primary-color);
+}
+
+figure p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+figure .label {
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 figcaption {
