@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    /* Aerospace Research Palette */
+    --primary: #0A192F;
+    /* Deep Space Navy */
+    --secondary: #F0F2F5;
+    /* Laboratory White */
+    --accent1: #4CC9F0;
+    /* Plasma Blue */
+    --accent2: #8892B0;
+    /* Metallic Silver */
+
+    /* Fonts */
+    --heading-font: "Montserrat";
+    --paragraph-font: "Open Sans", Helvetica, sans-serif;
+
+    /* Color Usage */
+    --headline-color-on-white: var(--primary);
+    --headline-color-on-color: var(--secondary);
+
+    --paragraph-color-on-white: var(--primary);
+    --paragraph-color-on-color: var(--secondary);
+
+    --paragraph-background-color: var(--primary);
+
+    --nav-link-color: var(--secondary);
+    --nav-background-color: var(--primary);
+    --nav-hover-link-color: var(--primary);
+    --nav-hover-background-color: var(--accent1);
+}
+
+/*  IMPORTANT here is the section of the css that you will need to modify for the color palette section of the site plan document. */
+/*  You will need to change the colors to match your palette.  */
+/*  The first color is the primary color, the second is secondary, etc. */
+
+td.primary {
+    background-color: var(--primary);
+}
+
+td.secondary {
+    background-color: var(--secondary);
+}
+
+td.accent1 {
+    background-color: var(--accent1);
+}
+
+td.accent2 {
+    background-color: var(--accent2);
+}
+
+/*  You shouldn't need to change anything below this line unless you want to. */
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    padding: 1rem;
+    margin: 0 auto;
+    font-size: 18px;
+    color: var(--paragraph-color-on-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-white);
+}
+
+h2 {
+    border-bottom: 2px solid var(--accent1);
+    /* Changed to accent1 for electric blue pop */
+}
+
+header {
+    padding: 0.5rem;
+    background-color: var(--secondary);
+    text-align: center;
+}
+
+header>h1,
+header>h2 {
+    color: var(--primary);
+}
+
+
+/* sections for the color palette */
+
+table.colors {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.colors tr {
+    border: 1px solid var(--accent2);
+    /* Softer border */
+}
+
+table.colors th {
+    background-color: #999;
+}
+
+table.colors td {
+    width: 25%;
+    height: 100px;
+}
+
+/* typography section */
+
+.colored {
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
+    padding: 1rem;
+}
+
+/* navigation */
+
+nav {
+    background-color: var(--nav-background-color);
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+nav a {
+    padding: 1em;
+    min-width: 120px;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    color: var(--nav-link-color);
+}
+
+nav a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+}
+
+/* sitemap */
+
+.sitemap {
+    display: grid;
+    justify-content: center;
+
+    grid-template-columns: repeat(8, 10%);
+    grid-template-rows: 3em 1.5em 1.5em 3em;
+    gap: 1em;
+}
+
+.sitemap>div {
+    text-align: center;
+}
+
+.sm-home {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    background-color: var(--primary);
+    color: #fff;
+    line-height: 3em;
+}
+
+.sm-page2 {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+    background-color: var(--primary);
+    color: #fff;
+    line-height: 3em;
+}
+
+.sm-page3 {
+    grid-column: 5 / span 2;
+    grid-row: 1;
+    background-color: var(--primary);
+    color: #fff;
+    line-height: 3em;
+}
+
+.sm-page4 {
+    grid-column: 7 / span 2;
+    grid-row: 1;
+    background-color: var(--primary);
+    color: #fff;
+    line-height: 3em;
+}
+
+.top {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    border-left: 1px solid var(--accent2);
+    border-right: 1px solid var(--accent2);
+}
+
+.left {
+    grid-column: 2;
+    grid-row: 3;
+    border-top: 1px solid var(--accent2);
+}
+
+.middle {
+    grid-column: 4 / span 2;
+    grid-row: 3;
+    border-top: 1px solid var(--accent2);
+}
+
+.right {
+    grid-column: 6 / span 2;
+    grid-row: 3;
+    border-top: 1px solid var(--accent2);
+}
