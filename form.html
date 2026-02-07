@@ -43,13 +43,13 @@
                         <!-- Stars are reversed for CSS logic usually -->
                         <input type="radio" id="star5" name="rating" value="5" required><label for="star5"
                             title="5 stars">&#9733;</label>
-                        <input type="radio" id="star4" name="rating" value="4"><label for="star4"
+                        <input type="radio" id="star4" name="rating" value="4" required><label for="star4"
                             title="4 stars">&#9733;</label>
-                        <input type="radio" id="star3" name="rating" value="3"><label for="star3"
+                        <input type="radio" id="star3" name="rating" value="3" required><label for="star3"
                             title="3 stars">&#9733;</label>
-                        <input type="radio" id="star2" name="rating" value="2"><label for="star2"
+                        <input type="radio" id="star2" name="rating" value="2" required><label for="star2"
                             title="2 stars">&#9733;</label>
-                        <input type="radio" id="star1" name="rating" value="1"><label for="star1"
+                        <input type="radio" id="star1" name="rating" value="1" required><label for="star1"
                             title="1 star">&#9733;</label>
                     </div>
                 </div>
@@ -63,10 +63,14 @@
             <fieldset>
                 <legend>Features</legend>
                 <div class="checkbox-group">
-                    <label><input type="checkbox" name="features" value="durabilitiy"> Durability</label>
-                    <label><input type="checkbox" name="features" value="ease of use"> Ease of Use</label>
-                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
-                    <label><input type="checkbox" name="features" value="design"> Design</label>
+                    <label for="feat-durability"><input type="checkbox" id="feat-durability" name="features"
+                            value="durability"> Durability</label>
+                    <label for="feat-ease"><input type="checkbox" id="feat-ease" name="features" value="ease of use">
+                        Ease of Use</label>
+                    <label for="feat-perf"><input type="checkbox" id="feat-perf" name="features" value="performance">
+                        Performance</label>
+                    <label for="feat-design"><input type="checkbox" id="feat-design" name="features" value="design">
+                        Design</label>
                 </div>
             </fieldset>
 
