@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form - Bruno</title>
+    <meta name="description"
+        content="WDD 131 - Product Review Form - Bruno. This page allows users to review products.">
+    <meta name="author" content="Bruno Emerson Monsefu Gonzales">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="form.html" class="active">Form</a>
+            <a href="temples.html">Temples</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Product Review Form</h2>
+        <form method="get" action="review.html">
+            <fieldset>
+                <legend>Product Details</legend>
+                <div class="form-item">
+                    <label for="product" class="required">Product Name:</label>
+                    <select id="product" name="product" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                    </select>
+                </div>
+
+                <div class="form-item">
+                    <label class="required">Overall Rating:</label>
+                    <div class="stars">
+                        <!-- Stars are reversed for CSS logic usually -->
+                        <input type="radio" id="star5" name="rating" value="5" required><label for="star5"
+                            title="5 stars">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4"
+                            title="4 stars">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3"
+                            title="3 stars">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2"
+                            title="2 stars">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1"
+                            title="1 star">&#9733;</label>
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <label for="date" class="required">Date of Installation:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Features</legend>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="features" value="durabilitiy"> Durability</label>
+                    <label><input type="checkbox" name="features" value="ease of use"> Ease of Use</label>
+                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
+                    <label><input type="checkbox" name="features" value="design"> Design</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Review</legend>
+                <div class="form-item">
+                    <label for="review">Written Review (Optional):</label>
+                    <textarea id="review" name="review" rows="4"></textarea>
+                </div>
+
+                <div class="form-item">
+                    <label for="username">Your Name (Optional):</label>
+                    <input type="text" id="username" name="username">
+                </div>
+            </fieldset>
+
+            <input type="submit" value="Submit Review" class="submit-btn">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Bruno | United States</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

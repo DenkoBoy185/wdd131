@@ -1,0 +1,175 @@
+/* Basic Rest and Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header nav a.active {
+    color: #f0a500;
+}
+
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 0;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    color: #444;
+}
+
+.form-item {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+label.required::after {
+    content: " *";
+    color: #d00000;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    /* Ensures padding doesn't affect width */
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Star Rating */
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    /* Reverse order for CSS selection logic */
+    justify-content: flex-end;
+}
+
+.stars input[type="radio"] {
+    display: none;
+}
+
+.stars label {
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+.stars input[type="radio"]:checked~label {
+    color: #f0a500;
+    /* Gold color for selected stars */
+}
+
+.stars label:hover,
+.stars label:hover~label {
+    color: #f0a500;
+    /* Hover effect */
+}
+
+/* Checkboxes */
+.checkbox-group label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+#lastModified {
+    color: #f0a500;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation - Bruno</title>
+    <meta name="description" content="Confirmation page for product review submission.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/review.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="form.html">Form</a>
+            <a href="temples.html">Temples</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Thank You!</h2>
+        <p>Your review has been successfully submitted.</p>
+        <p>You have completed <span id="reviewCounter"></span> reviews.</p>
+        <p>We appreciate your feedback.</p>
+        <a href="form.html" class="submit-btn"
+            style="display: inline-block; text-decoration: none; margin-top: 20px;">Submit Another Review</a>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Bruno | United States</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
